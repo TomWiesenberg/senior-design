@@ -19,7 +19,7 @@ GPIO.output(in1,GPIO.HIGH)
 
 
 while True:
-    voltage = GPIO.input(20)
+    voltage = GPIO.input( )
     print("voltage: ", voltage)
     if (voltage == 1):
         GPIO.output(in1,GPIO.LOW)
