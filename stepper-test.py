@@ -12,15 +12,19 @@ def degToStep(degrees):
     steps = degrees/7.2
     return steps
 
-GpioPins = [18, 23, 24, 25]
+# GpioPins = [18, 23, 24, 25]
+GpioPins = [17, 27, 22, 10]
 
 # Declare an named instance of class pass a name and type of motor
 mymotortest = RpiMotorLib.BYJMotor("MyMotorOne", "Nema")
 time.sleep(0.5)
 
 # call the function pass the parameters
-numDegrees = 360
-mymotortest.motor_run(GpioPins , 0.001, degToStep(numDegrees), False, False, "half", .05)
+# numDegrees = 2150
+numDegrees = 90
+#17,27, 22, 10
+#True is counterclockwise
+mymotortest.motor_run(GpioPins , 0.01, degToStep(numDegrees), True, False, "half", .05)
 
 
 
