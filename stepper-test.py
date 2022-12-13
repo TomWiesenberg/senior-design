@@ -20,11 +20,12 @@ mymotortest = RpiMotorLib.BYJMotor("MyMotorOne", "Nema")
 time.sleep(0.5)
 
 # call the function pass the parameters
-# numDegrees = 2150
-numDegrees = 90
+numDegrees = 2100
+# numDegrees = 280
 #17,27, 22, 10
 #True is counterclockwise
-mymotortest.motor_run(GpioPins , 0.01, degToStep(numDegrees), True, False, "half", .05)
+#True is down
+mymotortest.motor_run(GpioPins , 0.001, degToStep(numDegrees), True, False, "half", .05)
 
 
 
