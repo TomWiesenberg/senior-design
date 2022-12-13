@@ -108,6 +108,10 @@ pwm.stop()
 index2to1 = 90
 indexMotor.motor_run(GpioPinsIndex , 0.01, degToStep(index2to1), False, False, "half", .05)
 
+#stall stepper
+GPIO.output(18,GPIO.HIGH)
+GPIO.output(23,GPIO.HIGH)
+
 
 #what does it need to be able to do
 
